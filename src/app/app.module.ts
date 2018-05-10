@@ -21,4 +21,4 @@ import { LoginMenuComponent } from './login-menu/login-menu.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 
