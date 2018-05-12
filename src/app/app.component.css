@@ -1,8 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-.container {
-    background-color: #5a5a;
-}
-
 #title-id {
+    font-family: 'IBM Plex Sans', sans-serif;
     text-align: center;
 }

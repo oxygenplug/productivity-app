@@ -1,7 +1,7 @@
-#login-sigup-btns {
+.lead {
     text-align: center;
 }
-
+/* per Materialize best practices, buttons should always have their text in uppercase */
 button {
     text-transform: uppercase;    
 }
@@ -12,4 +12,12 @@ button {
     position: relative;
     min-height: 100%;
     background-size: cover;
+}
+ /* space out buttons nicely */
+.lead button {
+    margin: 20px;
+}
+
+.navbar-nav {
+    float: right;
 }

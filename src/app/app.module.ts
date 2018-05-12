@@ -6,6 +6,7 @@ import { TimerComponent } from './timer/timer.component';
 import { OptionsMenuComponent } from './options-menu/options-menu.component';
 import { LoginMenuComponent } from './login-menu/login-menu.component';
 import {MatButtonModule} from '@angular/material/button';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
