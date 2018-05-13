@@ -1,28 +1,23 @@
-<p>
-    task-card works!
-</p>
-
-
 <mat-card class="example-card">
-    <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title aria-placeholder="Title"></mat-card-title>
-        <mat-card-subtitle aria-placeholder="tags"></mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <p>
+    <h1 aria-placeholder="Title">{{ task.title }}</h1>
+    <h4>Due by: </h4>
+    <h6>{{ task.dueDate | date : 'shortDate' }}</h6>
+    <h6>{{ task.dueDate | date : 'shortTime' }}</h6>
+    <mat-progress-bar mode="determinate" [value]="elapsedPercentage"></mat-progress-bar>
 
-            <mat-form-field class="">
-                <input matInput type="text" placeholder="Description" [(ngModel)]="value" />
-                <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                    <mat-icon>close</mat-icon>
-                </button>
-            </mat-form-field>
-        </p>
-    </mat-card-content>
-    <mat-card-actions>
-            <button mat-fab color="warn">Delete</button>
-            <button mat-fab color="primary">Complete</button>
-            <button mat-fab color="accent">Start Timer</button>
-    </mat-card-actions>
+
+    <mat-form-field class="">
+        <input matInput type="text" placeholder="tags" [(ngModel)]="value" />
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+
+    <div class="btn-group">
+        <button mat-fab color="warn">Delete</button>
+        <button mat-fab color="primary">Complete</button>
+        <button mat-fab color="accent">Start Timer</button>
+    </div>
+
 </mat-card>

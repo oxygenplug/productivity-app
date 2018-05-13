@@ -1,0 +1,17 @@
+:host {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 25px;
+    text-align: center;
+}
+
+mat-form-field {
+    display: block;
+    text-align: center;
+}
+
+.mat-fab {
+    width: 33.33%;
+    margin: 0 auto;
+}
