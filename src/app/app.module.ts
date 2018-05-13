@@ -11,6 +11,8 @@ import { MatButtonModule, MatInputModule } from "@angular/material";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { OxyModalComponent } from "./oxy-modal/oxy-modal.component";
 import { SignupMenuComponent } from './signup-menu/signup-menu.component';
+import { TaskDashboardComponent } from './task-dashboard/task-dashboard.component';
+import { TaskCardComponent } from './task-card/task-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SignupMenuComponent } from './signup-menu/signup-menu.component';
     HomeMenu,
     LoginMenuComponent,
     OxyModalComponent,
-    SignupMenuComponent
+    SignupMenuComponent,
+    TaskDashboardComponent,
+    TaskCardComponent
   ],
   // imports neccessary browser and routing modules, along with the needed material design component modules
   imports: [
