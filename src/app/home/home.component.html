@@ -21,7 +21,7 @@
         <p class="lead">
             <button mat-raised-button (click)="showLogIn()">Log In</button>
             <br>
-            <button mat-raised-button color="primary">Sign Up</button>
+            <button mat-raised-button color="primary" (click)="showSignUp()">Sign Up</button>
         </p>
     </main>
     <oxy-modal [(isShowing)]="isLoginShowing">
