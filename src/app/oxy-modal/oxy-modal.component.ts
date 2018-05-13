@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "oxy-modal",
@@ -7,12 +7,14 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class OxyModalComponent implements OnInit {
   @Input() isShowing: boolean = false;
+  @Output() isShowingChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() {}
 
   ngOnInit() {}
 
   public close(): void {
-      this.isShowing = false;
+    this.isShowing = false;
+    this.isShowingChange.emit(this.isShowing);
   }
 }

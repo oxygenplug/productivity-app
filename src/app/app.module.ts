@@ -10,6 +10,7 @@ import { LoginMenuComponent } from "./login-menu/login-menu.component";
 import { MatButtonModule, MatInputModule } from "@angular/material";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { OxyModalComponent } from "./oxy-modal/oxy-modal.component";
+import { SignupMenuComponent } from './signup-menu/signup-menu.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { OxyModalComponent } from "./oxy-modal/oxy-modal.component";
     TimerComponent,
     HomeMenu,
     LoginMenuComponent,
-    OxyModalComponent
+    OxyModalComponent,
+    SignupMenuComponent
   ],
   // imports neccessary browser and routing modules, along with the needed material design component modules
   imports: [

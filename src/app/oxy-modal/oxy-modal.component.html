@@ -1,5 +1,11 @@
-<div class="background" *ngIf="isShowing" (click)="close()"></div>
-<div class="oxy-modal" *ngIf="isShowing">
+<div class="background" *ngIf="isLoginShowing" (click)="close()"></div>
+<div class="oxy-modal" *ngIf="isLoginShowing">
+    <ng-content>
+
+    </ng-content>
+</div>
+<div class="background" *ngIf="isSignupShowing" (click)="close()"></div>
+<div class="oxy-modal" *ngIf="isSignUpShowing">
     <ng-content>
 
     </ng-content>

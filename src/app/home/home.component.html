@@ -24,9 +24,14 @@
             <button mat-raised-button color="primary">Sign Up</button>
         </p>
     </main>
-    <oxy-modal [isShowing]="isLoginShowing">
+    <oxy-modal [(isShowing)]="isLoginShowing">
         <app-login-menu></app-login-menu>
     </oxy-modal>
+    <oxy-modal [(isShowing)]="isSignUpShowing">
+            <app-signup-menu></app-signup-menu>
+    </oxy-modal>
+
+
     <footer class="mastfoot mt-auto">
         <div class="inner">
         </div>

@@ -7,7 +7,7 @@ import { InteractivityChecker } from '@angular/cdk/a11y';
   styleUrls: ['./login-menu.component.css']
 })
 export class LoginMenuComponent implements OnInit {
-    @Input() isShowing: boolean = false;
+    @Input() isLoginShowing: boolean = false;
     public loginInfo: LoginFormInfo={
         username: '',
         password:  ''
