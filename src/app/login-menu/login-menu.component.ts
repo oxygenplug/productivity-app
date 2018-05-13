@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { InteractivityChecker } from '@angular/cdk/a11y';
 
 @Component({
   selector: 'app-login-menu',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-menu.component.css']
 })
 export class LoginMenuComponent implements OnInit {
-
-  constructor() { }
+    @Input() isShowing: boolean = false;
+    public loginInfo: LoginFormInfo={
+        username: '',
+        password:  ''
+    }
+  constructor() {}
 
   ngOnInit() {
   }
 
+  public onSubmit(): void {
+      console.log(this.loginInfo);
+  }
+
+}
+
+interface LoginFormInfo {
+    username: string;
+    password: string;
 }

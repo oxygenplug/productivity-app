@@ -1,3 +1,19 @@
-<p>
-  login-menu works!
-</p>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+        {{ loginForm.value | json }}
+    </div>
+    <div>
+        {{ loginForm.valid }}
+    </div>
+    <mat-form-field class="block">
+        <input matInput placeholder="username" type="username" id="username" name="username" #username="ngModel" required [(ngModel)]="loginInfo.username">
+        <mat-error *ngIf="username.invalid">Please enter valid username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="block">
+        <input matInput placeholder="password" type="password" id="password" name="password" #password="ngModel" required [(ngModel)]="loginInfo.password">
+        <mat-error *ngIf="password.invalid">Please enter valid password</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Log In</button>
+</form>
