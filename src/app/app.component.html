@@ -1,9 +1,17 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Tasky</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Options</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Options</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>    
 
-<div class="container">
-  <h1 id="title-id">
-    Welcome to {{ title }}!
-  </h1>
-</div>
 
-<home-menu>
-</home-menu>
+
+<router-outlet></router-outlet>
