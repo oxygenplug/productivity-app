@@ -1,4 +1,4 @@
-:host {
+task-card {
     float: left;
     width: 33.33%;
     box-sizing: border-box;
@@ -6,12 +6,34 @@
     text-align: center;
 }
 
-mat-form-field {
+task-card mat-form-field {
     display: block;
     text-align: center;
 }
 
-.mat-fab {
-    width: 33.33%;
-    margin: 0 auto;
+task-card .btn-group {
+    margin: 7px;
+}
+
+task-card .btn-group .action-btn {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+task-card mat-progress-bar .mat-progress-bar-primary:after {
+    background-color: green;
+}
+
+
+task-card mat-progress-bar.yellow .mat-progress-bar-primary:after {
+    background-color: yellow;
+}
+
+task-card mat-progress-bar.red .mat-progress-bar-primary:after {
+    background-color: red;
+}
+
+task-card .mat-progress-bar-buffer {
+    background-color: gainsboro;
 }
