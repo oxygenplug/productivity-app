@@ -13,6 +13,7 @@ export class OxyModalComponent implements OnInit {
 
   ngOnInit() {}
 
+  // closes the modal based on the state of isShowing
   public close(): void {
     this.isShowing = false;
     this.isShowingChange.emit(this.isShowing);
