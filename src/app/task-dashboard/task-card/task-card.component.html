@@ -4,8 +4,6 @@
     <h6>{{ task.dueDate | date : 'shortDate' }}</h6>
     <h6>{{ task.dueDate | date : 'shortTime' }}</h6>
     <mat-progress-bar mode="determinate" [value]="elapsedPercentage" [ngClass]="{'red': elapsedPercentage <= 20, 'yellow': elapsedPercentage < 50}"></mat-progress-bar>
-
-
     <mat-form-field class="">
         <input matInput type="text" placeholder="tags" [(ngModel)]="value" />
         <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
@@ -13,11 +11,9 @@
         </button>
     </mat-form-field>
 
-
     <div class="btn-group">
         <button mat-fab color="warn" class="action-btn">&#10006;</button>
         <button mat-fab color="accent" class="action-btn">&#10004;</button>
         <button mat-fab color="primary" class="action-btn">&#8986;</button>
     </div>
-
 </mat-card>
