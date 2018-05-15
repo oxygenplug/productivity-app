@@ -2,7 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import {
   MatCardModule,
   MatButtonModule,
-  MatInputModule
+  MatInputModule,
+  MatIconModule
 } from "@angular/material";
 import { Task } from "./task";
 

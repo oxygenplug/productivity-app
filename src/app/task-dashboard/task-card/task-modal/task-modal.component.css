@@ -5,3 +5,7 @@ body {
 #modal-options {
     float: left;
 }
+
+#task-switcher button {
+    margin: 15px;
+}
