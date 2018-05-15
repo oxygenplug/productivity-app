@@ -16,8 +16,9 @@ import { Observable, Subscription, Subscriber } from "rxjs";
 })
 export class TaskCardComponent implements OnInit {
   @Input() task: Task;
+  public isModalShowing: boolean = false;
   public progressColor: string;
-  public elapsedPercentage: number;
+  public elapsedPercentage: number = 100;
   private timer: Observable<number> = timer(1000, 1000);
   private timerSubscriber: Subscription;
   constructor() {
@@ -44,5 +45,11 @@ export class TaskCardComponent implements OnInit {
 
   private getTotalSeconds(date: Date): number {
     return date.getTime() / 1000;
+  }
+
+  public onCardClick(event: Event, card: HTMLElement) {
+    if(event.target === card) {
+        this.isModalShowing = true;
+    }
   }
 }

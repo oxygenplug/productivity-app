@@ -1,4 +1,5 @@
-<mat-card class="example-card">
+<mat-card>
+    <mat-icon (click)="isModalShowing=true" class="card-menu">menu</mat-icon>
     <h1 aria-placeholder="Title">{{ task.title }}</h1>
     <h4>Due by: </h4>
     <h6>{{ task.dueDate | date : 'shortDate' }}</h6>
@@ -17,3 +18,5 @@
         <button mat-fab color="primary" class="action-btn">&#8986;</button>
     </div>
 </mat-card>
+
+<task-modal [(task)]="task" [(isShowing)]="isModalShowing"></task-modal>

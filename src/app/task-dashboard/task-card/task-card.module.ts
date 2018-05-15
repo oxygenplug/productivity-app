@@ -3,6 +3,8 @@ import { CommonModule } from "@angular/common"
 import { MatCardModule, MatButtonModule, MatInputModule, MatIconModule, MatProgressBarModule } from "@angular/material";
 import { TaskCardComponent } from "./task-card.component";
 import { FormsModule } from "@angular/forms";
+import { TaskModalComponent } from "./task-modal/task-modal.component";
+
 @NgModule({
   imports: [
     MatCardModule,
@@ -11,10 +13,11 @@ import { FormsModule } from "@angular/forms";
     FormsModule,
     MatIconModule,
     CommonModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ],
   exports: [TaskCardComponent],
-  declarations: [TaskCardComponent],
+  declarations: [TaskCardComponent, TaskModalComponent],
   providers: []
 })
 export class TaskCardModule {}
