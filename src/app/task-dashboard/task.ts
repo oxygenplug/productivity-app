@@ -1,8 +1,8 @@
 export interface Task {
     title: string,
     tags: string,
-    priority: number,
+    priority: number, //delete all of these 
     completed: boolean,
-    createdDate: Date,
+    createdDate: Date, // can be handled by the backend and return to Task? 
     dueDate: Date,
 }
