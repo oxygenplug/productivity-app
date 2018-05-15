@@ -9,11 +9,14 @@
             <div class="modal-center">
                 <div id="modal-header">
                     <mat-form-field>
-                        <input [(ngModel)]="task.title" matInput placeholder="Task Title">
+                        <input [(ngModel)]="task.title" matInput>
                     </mat-form-field>
                 </div>
-                <div class="modal-body">      
-                            <h6>Enter Task Description Here</h6>       
+                <div class="modal-body">
+                        <mat-form-field>
+                        <input type="input" placeholder="Task Description" class="task-description">   
+                            </mat-form-field>      
+                                
                 </div>
                 <div class="modal-options">
                         <button mat-fab color="warn" class="action-btn">&#10006;</button>
