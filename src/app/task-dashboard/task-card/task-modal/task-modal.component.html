@@ -1,14 +1,10 @@
 <div class="background" *ngIf="isShowing" (click)="close()"></div>
 <div class="oxy-modal" *ngIf="isShowing">
-    <div id="detail-modal">
+    <div class="detail-modal">
         <div id="modal-bg">
             <div id="modal-left">
                 <div class="modal-time"></div>
-                <div id="modal-options">
-                    <button mat-fab color="warn" class="action-btn">&#10006;</button>
-                    <button mat-fab color="accent" class="action-btn">&#10004;</button>
-                    <button mat-fab color="primary" class="action-btn">&#8986;</button>
-                </div>
+                
             </div>
             <div class="modal-center">
                 <div id="modal-header">
@@ -16,15 +12,18 @@
                         <input [(ngModel)]="task.title" matInput placeholder="Task Title">
                     </mat-form-field>
                 </div>
-                <div class="modal-body">
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod voluptate quae debitis unde laudantium.
-                        Debitis libero quidem culpa at? Dicta expedita laborum nobis officiis delectus pariatur illo eveniet
-                        incidunt quis!</h4>
+                <div class="modal-body">      
+                            <h6>Enter Task Description Here</h6>       
                 </div>
+                <div class="modal-options">
+                        <button mat-fab color="warn" class="action-btn">&#10006;</button>
+                        <button mat-fab color="accent" class="action-btn">&#10004;</button>
+                        <button mat-fab color="primary" class="action-btn">&#8986;</button>
+                    </div>
             </div>
         </div>
     </div>
-    <div id="task-switcher">
+    <div class="task-switcher">
         <button mat-fab color="basic" id="prev-item"><</button>
         <button mat-fab color="basic" id="next-item">></button>
     </div>

@@ -16,16 +16,29 @@ export class TaskDashboardComponent implements OnInit {
   public tasks: Task[] = [];
 
   constructor() {
-    for (let i = 0; i < 6; i++) {
-      this.tasks.push({
-        title: "My First Task",
-        priority: 1,
-        tags: "default",
-        completed: false,
-        createdDate: new Date(Date.now()),
-        dueDate: new Date(new Date().getTime() + (Math.random() * 1000000))
-      });
-    }
+    // for (let i = 0; i < 6; i++) {
+    //   this.tasks.push({
+    //     title: "My First Task",
+    //     priority: 1,
+    //     tags: "default",
+    //     completed: false,
+    //     createdDate: new Date(Date.now()),
+    //     dueDate: new Date(new Date().getTime() + (Math.random() * 1000000))
+    //   });
+    // }
+  }
+
+  public createTask(){
+    {
+        this.tasks.push({
+          title: "Task",
+          priority: 1,
+          tags: "default",
+          completed: false,
+          createdDate: new Date(Date.now()),
+          dueDate: new Date(new Date().getTime() + (Math.random() * 1000000))
+        });
+      }
   }
 
   ngOnInit() {}

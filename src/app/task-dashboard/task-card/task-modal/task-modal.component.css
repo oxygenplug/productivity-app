@@ -1,11 +1,15 @@
-body {
+.detail-modal {
     text-align: center;
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
 }
 
-#modal-options {
-    float: left;
+.modal-options button {
+    margin: 100px 10px 10px 10px;
 }
 
-#task-switcher button {
-    margin: 15px;
+.task-switcher button {
+    margin: 15px 15px 1px 15px;
 }
