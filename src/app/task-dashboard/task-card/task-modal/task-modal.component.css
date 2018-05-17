@@ -7,16 +7,9 @@
 }
 
 .modal-options button {
-    margin: 75px 10px 10px 20px;
+    margin: 100px 10px 10px 10px;
 }
 
 .task-switcher button {
     margin: 15px 15px 1px 15px;
-}
-
-.task-description {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: solid 1px;
 }
