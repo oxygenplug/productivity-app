@@ -30,12 +30,24 @@ export class UserAuthService {
     // make a post request to the server with the username and password from the loginInfo. server returns the token in the body, save the token in localstorage, and redirect to the dashboard
   }
 
-  public logOut() {
+  public logOut(loginInfo: LoginFormInfo) {
+    this.httpClient
+      .delete<User>(`${this.basePath}/users/me/token`)
+      .subscribe(res => {
+        localStorage.setItem("token", res.token);
+        this.router.navigateByUrl("/dashboard");
+      });
     // make a delete request to the server, remove token and all cache from local storage
   }
 
-  public signUp() {
+  public signUp(loginInfo: LoginFormInfo) {
     // /users/
     // make a post request to the server with the username and password, server returns the token in the body, save the token in localStorage, and redirect to the dashboard
+    this.httpClient
+      .post<User>(`${this.basePath}/users/`, loginInfo)
+      .subscribe(res => {
+        localStorage.setItem("token", res.token);
+        this.router.navigateByUrl("/dashboard");
+      });
   }
 }

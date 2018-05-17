@@ -11,7 +11,7 @@ import { UserAuthService } from '../userAuth.service';
 export class LoginMenuComponent implements OnInit {
     @Input() isLoginShowing: boolean = false;
     public loginInfo: LoginFormInfo={
-        username: '',
+        email: '',
         password:  ''
     }
   constructor(private userAuthService: UserAuthService) {

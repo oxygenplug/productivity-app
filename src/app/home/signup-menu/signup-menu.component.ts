@@ -11,7 +11,6 @@ export class SignupMenuComponent implements OnInit {
     @Input() isSignUpShowing: boolean = false;
     public signUpInfo: SignUpFormInfo={
         email: '',
-        username: '',
         password:  ''
     }
   constructor() {}
@@ -27,7 +26,6 @@ export class SignupMenuComponent implements OnInit {
 
 interface SignUpFormInfo {
     email: string;
-    username: string;
     password: string;
 }
 
