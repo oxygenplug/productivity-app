@@ -5,6 +5,7 @@ import { HomeComponent } from "./home.component";
 import { LoginMenuModule } from "./login-menu/login-menu.module";
 import { SignupMenuModule } from "./signup-menu/signup-menu.module";
 import { OxyModule } from '../oxy/oxy.module'
+import { UserAuthService } from "./userAuth.service";
 @NgModule({
     declarations: [
         HomeComponent
@@ -16,7 +17,8 @@ import { OxyModule } from '../oxy/oxy.module'
         LoginMenuModule,
         SignupMenuModule
     ],
-    exports: [HomeComponent]
+    exports: [HomeComponent],
+    providers: [UserAuthService]
 })
 
 export class HomeModule {}
