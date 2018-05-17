@@ -6,6 +6,7 @@ import {
   MatIconModule
 } from "@angular/material";
 import { Task } from "./task";
+import { TaskService } from "./task.service"
 
 @Component({
   selector: "task-dashboard",
@@ -14,32 +15,20 @@ import { Task } from "./task";
 })
 export class TaskDashboardComponent implements OnInit {
   public tasks: Task[] = [];
+  constructor(private taskService: TaskService) {
 
-  constructor() {
-    // for (let i = 0; i < 6; i++) {
-    //   this.tasks.push({
-    //     title: "My First Task",
-    //     priority: 1,
-    //     tags: "default",
-    //     completed: false,
-    //     createdDate: new Date(Date.now()),
-    //     dueDate: new Date(new Date().getTime() + (Math.random() * 1000000))
-    //   });
-    // }
   }
 
-  public createTask(){
-    {
-        this.tasks.push({
-          title: "Task",
-          priority: 1,
-          tags: "default",
-          completed: false,
-          createdDate: new Date(Date.now()),
-          dueDate: new Date(new Date().getTime() + (Math.random() * 1000000))
-        });
-      }
+  public createTask() {
+    let newTask = this.taskService.createTask();
+   // this.tasks.push(newTask);
   }
 
-  ngOnInit() {}
+  public deleteTask(id: number) {
+    this.taskService.deleteTask(id);
+  }
+
+  ngOnInit() {
+      this.tasks = this.taskService.getTasks();
+  }
 }

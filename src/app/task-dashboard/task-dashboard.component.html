@@ -1,5 +1,5 @@
 <div>
-    <task-card [task]="task"  *ngFor='let task of tasks'>
+    <task-card [task]="task" (delete)="deleteTask($event)"  *ngFor='let task of tasks'>
     
     </task-card>
     <mat-icon id="add-task" (click)="createTask()">add_circle_outline</mat-icon>

@@ -12,16 +12,17 @@
                         <input [(ngModel)]="task.title" matInput>
                     </mat-form-field>
                 </div>
-                <div class="modal-body">
-                        <mat-form-field>
+                <div class="modal-body">                
                         <input type="input" placeholder="Task Description" class="task-description">   
-                            </mat-form-field>      
+                        
                                 
                 </div>
                 <div class="modal-options">
-                        <button mat-fab color="warn" class="action-btn">&#10006;</button>
-                        <button mat-fab color="accent" class="action-btn">&#10004;</button>
-                        <button mat-fab color="primary" class="action-btn">&#8986;</button>
+                    <div class="btn-group">
+                        <button mat-fab color="warn" class="action-btn delete-btn" (click)="deleteTask()"><mat-icon>delete</mat-icon></button>
+                        <button mat-fab color="accent" class="action-btn complete-btn"><mat-icon>check</mat-icon></button>
+                        <button mat-fab color="primary" class="action-btn timer-btn"><mat-icon>timer</mat-icon></button>
+                    </div>
                     </div>
             </div>
         </div>

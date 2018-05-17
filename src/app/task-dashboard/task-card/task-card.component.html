@@ -13,10 +13,16 @@
     </mat-form-field>
 
     <div class="btn-group">
-        <button mat-fab color="warn" class="action-btn"><mat-icon>delete</mat-icon></button>
-        <button mat-fab color="accent" class="action-btn"><mat-icon>check</mat-icon></button>
-        <button mat-fab color="primary" class="action-btn"><mat-icon>timer</mat-icon></button>
+        <button mat-fab color="warn" class="action-btn delete-btn" (click)="deleteTask()">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-fab color="accent" class="action-btn complete-btn">
+            <mat-icon>check</mat-icon>
+        </button>
+        <button mat-fab color="primary" class="action-btn timer-btn">
+            <mat-icon>timer</mat-icon>
+        </button>
     </div>
 </mat-card>
 
-<task-modal [(task)]="task" [(isShowing)]="isModalShowing"></task-modal>
+<task-modal [(task)]="task" [(isShowing)]="isModalShowing" (delete)="deleteTask()"></task-modal>

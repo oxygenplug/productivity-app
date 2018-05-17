@@ -15,4 +15,9 @@ import { Task } from "../../task";
 export class TaskModalComponent extends OxyModalComponent {
   @Input() task: Task;
   @Output() taskChange: EventEmitter<Task> = new EventEmitter<Task>();
+  @Output() delete: EventEmitter<void> = new EventEmitter();
+  
+  public deleteTask() {
+      this.delete.emit();
+  }
 }

@@ -13,3 +13,7 @@
 .task-switcher button {
     margin: 15px 15px 1px 15px;
 }
+
+.task-description {
+    border: none;
+}

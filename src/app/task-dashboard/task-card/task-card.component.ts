@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from "@angular/core";
+import { Component, OnInit, Input, ViewEncapsulation, Output, EventEmitter } from "@angular/core";
 import {
   MatCardModule,
   MatButtonModule,
@@ -16,7 +16,9 @@ import { Observable, Subscription, Subscriber } from "rxjs";
 })
 export class TaskCardComponent implements OnInit {
   @Input() task: Task;
+  @Output() delete: EventEmitter<number> = new EventEmitter<number>();
   public isModalShowing: boolean = false;
+  public isCardShowing: boolean = false;
   public progressColor: string;
   public elapsedPercentage: number = 100;
   private timer: Observable<number> = timer(1000, 1000);
@@ -52,4 +54,8 @@ export class TaskCardComponent implements OnInit {
         this.isModalShowing = true;
     }
   }
+
+  public deleteTask() {
+      this.delete.emit(this.task.id);
+      }
 }
