@@ -27,7 +27,7 @@ export class UserAuthService {
         localStorage.setItem("token", res.token);
         this.router.navigateByUrl("/dashboard");
       });
-    // make a post request to the server with the username and password from the loginInfo. server returns the token in the body, save the token in localstorage, and redirect to the dashboard
+    // make a post request to the server with the email and password from the loginInfo. server returns the token in the body, save the token in localstorage, and redirect to the dashboard
   }
 
   public logOut(loginInfo: LoginFormInfo) {
@@ -42,7 +42,7 @@ export class UserAuthService {
 
   public signUp(loginInfo: LoginFormInfo) {
     // /users/
-    // make a post request to the server with the username and password, server returns the token in the body, save the token in localStorage, and redirect to the dashboard
+    // make a post request to the server with the email and password, server returns the token in the body, save the token in localStorage, and redirect to the dashboard
     this.httpClient
       .post<User>(`${this.basePath}/users/`, loginInfo)
       .subscribe(res => {
