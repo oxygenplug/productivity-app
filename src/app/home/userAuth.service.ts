@@ -1,28 +1,41 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError } from "rxjs/operators";
-import { userInfo } from "os";
+import { LoginMenuComponent } from "./login-menu/login-menu.component";
+import { User } from "./user";
+import { LoginFormInfo } from "../home/loginFormInfo";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class UserAuthService {
-    private basePath: 'https://agile-taiga-82794.herokuapp.com';
+  private basePath = "https://agile-taiga-82794.herokuapp.com";
 
-    constructor(private httpClient: HttpClient, private userAuth: UserAuthService){}
+  private _token: string;
+  public get token(): string {
+    return this._token;
+  }
+  constructor(
+    private httpClient: HttpClient,
+    private router: Router
+  ) {}
 
-    public logIn() {
-        // /users/login
-        // this.httpClient.get(`${this.basePath}/users/login`, {loginInfo.username, loginInfo.password})
+  public logIn(loginInfo: LoginFormInfo) {
+    // /users/login
+    this.httpClient
+      .post<User>(`${this.basePath}/users/login`, loginInfo)
+      .subscribe(res => {
+        localStorage.setItem("token", res.token);
+        this.router.navigateByUrl("/dashboard");
+      });
+    // make a post request to the server with the username and password from the loginInfo. server returns the token in the body, save the token in localstorage, and redirect to the dashboard
+  }
 
-        // make a get request to the server with the username and password from the loginInfo. server returns the token in the body, save the token in localstorage, and redirect to the dashboard
-    }
+  public logOut() {
+    // make a delete request to the server, remove token and all cache from local storage
+  }
 
-    public logOut(){
-        // make a delete request to the server, remove token and all cache from local storage
-    }
-
-    public signUp(){
-        // /users/
-
-        // make a post request to the server with the username and password, server returns the token in the body, save the token in localStorage, and redirect to the dashboard
-    }
+  public signUp() {
+    // /users/
+    // make a post request to the server with the username and password, server returns the token in the body, save the token in localStorage, and redirect to the dashboard
+  }
 }

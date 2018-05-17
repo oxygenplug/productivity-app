@@ -24,7 +24,6 @@ export class TaskService {
     } )  
     let newTask = {
       title: "Task",
-      priority: 1,
       tags: "default",
       completed: false,
       createdDate: new Date(Date.now()),
