@@ -2,5 +2,6 @@
     <task-card [task]="task" (delete)="deleteTask($event)"  *ngFor='let task of tasks'>
     
     </task-card>
+    <dl-date-time-picker></dl-date-time-picker>
     <mat-icon id="add-task" (click)="createTask()">add_circle_outline</mat-icon>
-</div>
+</div>  

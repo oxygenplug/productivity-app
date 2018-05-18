@@ -10,6 +10,7 @@ import { RouterModule } from "@angular/router";
 import { appRoutes } from "./app-routes";
 import { HomeModule } from "./home/home.module";
 
+
 @NgModule({
   declarations: [AppComponent],
   // imports neccessary browser and routing modules, along with the needed material design component modules

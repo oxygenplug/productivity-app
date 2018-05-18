@@ -2,11 +2,12 @@ import { Component, OnInit, Input, ViewEncapsulation, Output, EventEmitter } fro
 import {
   MatCardModule,
   MatButtonModule,
-  MatInputModule
+  MatInputModule,
+  MatNativeDateModule
 } from "@angular/material";
 import { Task } from "../task";
 import { timer } from "rxjs/observable/timer";
-import { Observable, Subscription, Subscriber } from "rxjs";
+import { Observable, Subscription, Subscriber } from "rxjs";	
 
 @Component({
   selector: "task-card",
@@ -17,6 +18,7 @@ import { Observable, Subscription, Subscriber } from "rxjs";
 export class TaskCardComponent implements OnInit {
   @Input() task: Task;
   @Output() delete: EventEmitter<number> = new EventEmitter<number>();
+  // @Input() owlDateTimeTrigger;
   public isModalShowing: boolean = false;
   public isCardShowing: boolean = false;
   public progressColor: string;

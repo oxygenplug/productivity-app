@@ -23,6 +23,26 @@
             <mat-icon>timer</mat-icon>
         </button>
     </div>
+    <!-- 
+    
+    <label>
+        Date
+        <input [(owlDateTimeTrigger)]="dt3" [(owlDateTime)]="dt3">
+        <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
+    </label>
+    
+    <label>
+        Time
+        <input [(owlDateTimeTrigger)]="dt4" [(owlDateTime)]="dt4">
+        <owl-date-time [pickerType]="'timer'" #dt4></owl-date-time>
+    </label> -->
+
+    <!-- <input [matDatepicker]="myDatepicker">
+    <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
+    <mat-datepicker #myDatepicker></mat-datepicker> -->
+
+
+
 </mat-card>
 
 <task-modal [(task)]="task" [(isShowing)]="isModalShowing" (delete)="deleteTask()"></task-modal>
