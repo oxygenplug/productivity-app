@@ -3,7 +3,7 @@ export interface Task {
     text: string,
     tags: string,
     completed: boolean,
-    createdDate: Date, // can be handled by the backend and return to Task? 
+    createdAt: Date, // can be handled by the backend and return to Task? 
     dueDate: Date,
-    id: number;
+    // id: number;
 }

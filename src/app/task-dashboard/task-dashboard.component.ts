@@ -24,9 +24,9 @@ export class TaskDashboardComponent implements OnInit {
    // this.tasks.push(newTask);
   }
 
-  public deleteTask(id: number) {
-    this.taskService.deleteTask(id);
-  }
+  // public deleteTask(id: number) {
+  //   this.taskService.deleteTask(id);
+  // }
 
   ngOnInit() {
       this.tasks = this.taskService.getTasks();

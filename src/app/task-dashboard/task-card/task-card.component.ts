@@ -29,7 +29,7 @@ export class TaskCardComponent implements OnInit {
       // calculates the due date time in seconds
       let dueDateSeconds = this.getTotalSeconds(this.task.dueDate);
       // gets the total seconds since task creation
-      let createdDateSeconds = this.getTotalSeconds(this.task.createdDate);
+      let createdDateSeconds = this.getTotalSeconds(this.task.createdAt);
       let currentDateSeconds = this.getTotalSeconds(new Date());
       let difference = dueDateSeconds - createdDateSeconds;
       let timeElapsed = currentDateSeconds - createdDateSeconds;
@@ -55,7 +55,7 @@ export class TaskCardComponent implements OnInit {
     }
   }
 
-  public deleteTask() {
-      this.delete.emit(this.task.id);
-      }
+  // public deleteTask() {
+  //     this.delete.emit(this.task.id);
+  //     }
 }

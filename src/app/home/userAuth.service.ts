@@ -41,13 +41,16 @@ export class UserAuthService {
   }
 
   public signUp(loginInfo: LoginFormInfo) {
+    console.log(loginInfo)
     // /users/
     // make a post request to the server with the email and password, server returns the token in the body, save the token in localStorage, and redirect to the dashboard
     this.httpClient
       .post<User>(`${this.basePath}/users/`, loginInfo)
       .subscribe(res => {
+        console.log('hi')
         localStorage.setItem("token", res.token);
         this.router.navigateByUrl("/dashboard");
       });
+      
   }
 }

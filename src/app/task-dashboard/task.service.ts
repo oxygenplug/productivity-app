@@ -9,8 +9,8 @@ export class TaskService {
   private tasks: Task[] = [];
   private headers = new HttpHeaders({
     'Content-Type': 'application/json',
-    'Authorization': 'x-auth',
-    'Access-Control-Allow-Origin': '*'  
+    'x-auth': localStorage.getItem('token'), 
+    // 'Access-Control-Allow-Origin': '*'   
 }) ;
 public testHello: string = 'hi everyone'
   private currentId: number = 1;
@@ -26,24 +26,26 @@ public testHello: string = 'hi everyone'
       text: '',
       tags: "default",
       completed: false,
-      createdDate: new Date(Date.now()),
+      createdAt: new Date(Date.now()),
       dueDate: new Date(new Date().getTime() + Math.random() * 1000000),
-      id: this.currentId++
+      // id: this.currentId++
     };
     this.tasks.push(newTask);
-    this.httpClient.post<Task>(`${this.basePath}/tasks`,{newTask}, {
+    console.log(newTask);
+    this.httpClient.post<Task>(`https://agile-taiga-82794.herokuapp.com/tasks`, newTask , {
         headers: this.headers,
+
     } ).subscribe(res => {
 
     })  
     return newTask;
   }
 
-  public deleteTask(id: number) {
-    let index = this.tasks.findIndex(value => {
-      return value.id == id;
-    });
+  // public deleteTask(id: number) {
+  //   let index = this.tasks.findIndex(value => {
+  //     return value.id == id;
+  //   });
 
-    this.tasks.splice(index, 1);
-  }
+  //   this.tasks.splice(index, 1);
+  // }
 }
