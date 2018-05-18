@@ -10,7 +10,7 @@ export class TaskService {
   private headers = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': 'x-auth',
-    // 'Access-Control-Allow-Origin': '*'  
+    'Access-Control-Allow-Origin': '*'  
 }) ;
 public testHello: string = 'hi everyone'
   private currentId: number = 1;
@@ -31,7 +31,7 @@ public testHello: string = 'hi everyone'
       id: this.currentId++
     };
     this.tasks.push(newTask);
-    this.httpClient.post<Task>(`https://agile-taiga-82794.herokuapp.com/tasks`,{newTask}, {
+    this.httpClient.post<Task>(`${this.basePath}/tasks`,{newTask}, {
         headers: this.headers,
     } ).subscribe(res => {
 
