@@ -1,0 +1,27 @@
+form {
+    max-width: 175px;
+    margin: auto;
+}
+
+.date-picker, .time-container {
+    max-width: 175px;
+    margin: auto;
+    display: block;
+}
+
+.time-container {
+    display: block;
+}
+
+.time {
+    margin-right: 50px;
+    display: block;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+
+.m-divider {
+    box-sizing: border-box;    
+    max-width: 50px;
+    float: right;
+}

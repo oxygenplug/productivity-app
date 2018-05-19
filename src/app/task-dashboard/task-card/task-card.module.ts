@@ -4,6 +4,7 @@ import { MatCardModule, MatButtonModule, MatInputModule, MatIconModule, MatProgr
 import { TaskCardComponent } from "./task-card.component";
 import { FormsModule } from "@angular/forms";
 import { TaskModalComponent } from "./task-modal/task-modal.component";
+import { DateTimePickerModule } from "./datetime-picker/datetime-picker.module";
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { TaskModalComponent } from "./task-modal/task-modal.component";
     MatIconModule,
     CommonModule,
     MatProgressBarModule,
-    MatIconModule
+    MatIconModule,
+    DateTimePickerModule
   ],
   exports: [TaskCardComponent],
   declarations: [TaskCardComponent, TaskModalComponent],

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="40"></circle>
+        <filter x="-21.9%" y="-15.6%" width="143.8%" height="146.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadOuter2"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M9.16666667,18.3333333 L18.3333333,18.3333333 L18.3333333,9.16666667 L9.16666667,9.16666667 L9.16666667,18.3333333 Z M22.9166667,45.8333333 L32.0833333,45.8333333 L32.0833333,36.6666667 L22.9166667,36.6666667 L22.9166667,45.8333333 Z M9.16666667,45.8333333 L18.3333333,45.8333333 L18.3333333,36.6666667 L9.16666667,36.6666667 L9.16666667,45.8333333 Z M9.16666667,32.0833333 L18.3333333,32.0833333 L18.3333333,22.9166667 L9.16666667,22.9166667 L9.16666667,32.0833333 Z M22.9166667,32.0833333 L32.0833333,32.0833333 L32.0833333,22.9166667 L22.9166667,22.9166667 L22.9166667,32.0833333 Z M36.6666667,9.16666667 L36.6666667,18.3333333 L45.8333333,18.3333333 L45.8333333,9.16666667 L36.6666667,9.16666667 Z M22.9166667,18.3333333 L32.0833333,18.3333333 L32.0833333,9.16666667 L22.9166667,9.16666667 L22.9166667,18.3333333 Z M36.6666667,32.0833333 L45.8333333,32.0833333 L45.8333333,22.9166667 L36.6666667,22.9166667 L36.6666667,32.0833333 Z M36.6666667,45.8333333 L45.8333333,45.8333333 L45.8333333,36.6666667 L36.6666667,36.6666667 L36.6666667,45.8333333 Z" id="path-3"></path>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Selected-task" transform="translate(-1241.000000, -869.000000)">
+            <g id="Group" transform="translate(1249.000000, 876.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FAFAFA" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="icon/navigation/apps_24px" transform="translate(13.000000, 13.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g fill-rule="nonzero"></g>
+                    <g id="✱-/-Color-/-Icons-/-Primary-or-Secondary" mask="url(#mask-4)" fill="#006FFF" fill-rule="evenodd">
+                        <g id="✱-/-Color-/-Primary-/-Main">
+                            <g id="✱-/-Color-/-Primary-/-700">
+                                <rect id="Rectangle-13" x="0" y="0" width="55" height="55"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

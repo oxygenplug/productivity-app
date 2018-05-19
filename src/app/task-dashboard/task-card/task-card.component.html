@@ -1,11 +1,11 @@
 <mat-card>
-        <h4>{{ task.id }}</h4>
+        <!-- <h4>{{ task.id }}</h4> -->
     
     <mat-icon (click)="isModalShowing=true" class="card-menu">menu</mat-icon>
     <h1 aria-placeholder="Title">{{ task.title }}</h1>
     <h4>Due by: </h4>
-    <h4>{{ task.dueDate | date : 'shortDate' }}</h4>
-    <h4>{{ task.dueDate | date : 'shortTime' }}</h4>
+    <datetime-picker [dateTime]="task.dueDate" (dateTimeChange)="updateDate($event)" [(isShowing)]="showForm"></datetime-picker>
+
     
     <mat-progress-bar mode="determinate" [value]="elapsedPercentage" [ngClass]="{'red': elapsedPercentage <= 20, 'yellow': elapsedPercentage < 50}"></mat-progress-bar>
     <mat-form-field class="">
@@ -19,31 +19,13 @@
         <button mat-fab color="warn" class="action-btn delete-btn" (click)="deleteTask()">
             <mat-icon>delete</mat-icon>
         </button>
-        <button mat-fab color="accent" class="action-btn complete-btn">
+        <button mat-fab color="accent" class="action-btn complete-btn" (click)="completeTask()">
             <mat-icon>check</mat-icon>
         </button>
-        <button mat-fab color="primary" class="action-btn timer-btn">
+        <button mat-fab color="primary" class="action-btn timer-btn" (click)="showForm=true">
             <mat-icon>timer</mat-icon>
         </button>
     </div>
-    <!-- 
-    
-    <label>
-        Date
-        <input [(owlDateTimeTrigger)]="dt3" [(owlDateTime)]="dt3">
-        <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
-    </label>
-    
-    <label>
-        Time
-        <input [(owlDateTimeTrigger)]="dt4" [(owlDateTime)]="dt4">
-        <owl-date-time [pickerType]="'timer'" #dt4></owl-date-time>
-    </label> -->
-
-    <!-- <input [matDatepicker]="myDatepicker">
-    <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
-    <mat-datepicker #myDatepicker></mat-datepicker> -->
-
 
 
 </mat-card>

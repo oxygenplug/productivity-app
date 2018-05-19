@@ -33,7 +33,6 @@ export class TaskDashboardComponent implements OnInit {
 
   ngOnInit() {
     this.taskService.getTasks().subscribe(res => {
-      console.log(res);
       this.tasks = res;
     });
   }

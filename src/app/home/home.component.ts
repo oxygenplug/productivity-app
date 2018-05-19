@@ -10,7 +10,6 @@ export class HomeComponent implements OnInit {
     public isSignUpShowing: boolean = false;
     
     public showLogIn(){
-        console.log('here');
         this.isLoginShowing = true;
     }
 

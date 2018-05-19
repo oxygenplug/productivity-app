@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>↳ Icon 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15,2.5 C8.1,2.5 2.5,8.1 2.5,15 C2.5,21.9 8.1,27.5 15,27.5 C21.9,27.5 27.5,21.9 27.5,15 C27.5,8.1 21.9,2.5 15,2.5 Z M12.5,21.25 L6.25,15 L8.0125,13.2375 L12.5,17.7125 L21.9875,8.225 L23.75,10 L12.5,21.25 Z" id="path-1"></path>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="All-tasks" transform="translate(-386.000000, -796.000000)">
+            <g id="Icon-/-Check-Circle-/-Filled" transform="translate(384.000000, 794.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" fill-rule="nonzero"></g>
+                <g id="✱-/-Color-/-Icons-/-Primary-or-Secondary" mask="url(#mask-2)" fill="#006FFF" fill-rule="evenodd">
+                    <g id="✱-/-Color-/-Primary-/-Main">
+                        <g id="✱-/-Color-/-Primary-/-700">
+                            <rect id="Rectangle-13" x="0" y="0" width="30" height="30"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

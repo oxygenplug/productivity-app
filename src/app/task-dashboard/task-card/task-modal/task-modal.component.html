@@ -1,4 +1,4 @@
-<div class="background" *ngIf="isShowing" (click)="close()"></div>
+<!-- <div class="background" *ngIf="isShowing" (click)="close()"></div>
 <div class="oxy-modal" *ngIf="isShowing">
     <div class="detail-modal">
         <div id="modal-bg">
@@ -12,12 +12,12 @@
                         <input [(ngModel)]="task.title" matInput>
                     </mat-form-field>
                 </div>
-                <div class="modal-body">                
+                <!-- <div class="modal-body">                
                         <input type="input" placeholder="Task Description" class="task-description">   
                         
                                 
-                </div>
-                <div class="modal-options">
+                </div> -->
+<!-- <div class="modal-options">
                     <div class="btn-group">
                         <button mat-fab color="warn" class="action-btn delete-btn" (click)="deleteTask()"><mat-icon>delete</mat-icon></button>
                         <button mat-fab color="accent" class="action-btn complete-btn"><mat-icon>check</mat-icon></button>
@@ -26,9 +26,29 @@
                     </div>
             </div>
         </div>
-    </div>
-    <div class="task-switcher">
+    </div>  -->
+<!-- <div class="task-switcher">
         <button mat-fab color="basic" id="prev-item"><</button>
         <button mat-fab color="basic" id="next-item">></button>
+    </div> -->
+<!-- </div> -->
+
+<div class="background" *ngIf="isShowing" (click)="close()"></div>
+<div class="oxy-modal" *ngIf="isShowing">
+    <div class="dueby-container">
+        <div>
+            Due By:
+        </div>
+        <div>
+            {{ task.dueDate | date: 'shortDate' }} {{ task.dueDate | date: 'shortTime' }}
+        </div>
+    </div>
+    <div class="input-container">
+        <mat-form-field class="heading_cards">
+            <input [(ngModel)]="task.title" matInput (blur)="updateTask()">
+        </mat-form-field>
+        <div class="textarea-container">
+            <textarea class="task_descripton" [(ngModel)]="task.text" (blur)="updateTask()"></textarea>
+        </div>
     </div>
 </div>

@@ -5,7 +5,6 @@ import { MatIconModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { TaskDashboardComponent } from './task-dashboard.component';
 import { TaskService } from './task.service';
-import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 
 @NgModule({
     imports: [
@@ -13,7 +12,6 @@ import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
         CommonModule,
         MatIconModule,
         HttpClientModule,
-        DlDateTimePickerDateModule
     ],
     exports: [
         TaskDashboardComponent

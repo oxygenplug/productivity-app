@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError, map } from "rxjs/operators";
 import { Task } from "./task";
 import { TaskResponse } from "./task-response";
+import { Title } from "@angular/platform-browser";
 
 @Injectable()
 export class TaskService {
@@ -18,7 +19,6 @@ export class TaskService {
   constructor(private httpClient: HttpClient) {}
 
   public getTasks() {
-    console.log(this.basePath);
     return this.httpClient
       .get<{ tasks: TaskResponse[] }>(`${this.basePath}/tasks`, {
         headers: this.headers
@@ -66,7 +66,23 @@ export class TaskService {
     }).subscribe();
   }
 
+  
+  public updateTask(task: Task) {
+    this.httpClient.patch(`${this.basePath}/tasks/${task.id}`, {
+        title: task.title,
+        text: task.text,
+        tags: task.tags,
+        completed: task.completed,
+        dueDate: task.dueDate
+    },{
+        headers: this.headers
+    }).subscribe();
+  }
+
   private convertToTask(taskRes: TaskResponse) {
+      if(!taskRes.dueDate){
+          taskRes.dueDate = new Date().toString();
+      }
     let result: Task = {
       title: taskRes.title,
       text: taskRes.text,

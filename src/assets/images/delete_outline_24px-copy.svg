@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="40px" viewBox="0 0 41 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/action/delete_outline_24px copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M39.1666667,3.91666667 L7.83333333,3.91666667 C5.67916667,3.91666667 3.91666667,5.67916667 3.91666667,7.83333333 L3.91666667,43.0833333 L11.75,35.25 L39.1666667,35.25 C41.3208333,35.25 43.0833333,33.4875 43.0833333,31.3333333 L43.0833333,7.83333333 C43.0833333,5.67916667 41.3208333,3.91666667 39.1666667,3.91666667 Z M39.1666667,31.3333333 L10.1245833,31.3333333 L7.83333333,33.6245833 L7.83333333,7.83333333 L39.1666667,7.83333333 L39.1666667,31.3333333 Z M21.5416667,9.79166667 L25.4583333,9.79166667 L25.4583333,21.5416667 L21.5416667,21.5416667 L21.5416667,9.79166667 Z M21.5416667,25.4583333 L25.4583333,25.4583333 L25.4583333,29.375 L21.5416667,29.375 L21.5416667,25.4583333 Z" id="path-1"></path>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="All-tasks" transform="translate(-490.000000, -232.000000)">
+            <g id="icon/action/announcement_24px" transform="translate(487.000000, 229.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g fill-rule="nonzero"></g>
+                <g id="✱-/-Color-/-Icons-/-Error" mask="url(#mask-2)" fill="#B00020" fill-rule="evenodd">
+                    <rect id="Rectangle" x="0" y="0" width="47" height="47"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

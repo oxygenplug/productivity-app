@@ -22,7 +22,6 @@ export class LoginMenuComponent implements OnInit {
 
   public onSubmit(): void {
       this.userAuthService.logIn(this.loginInfo);
-      console.log(this.loginInfo);
   }
 
 }

@@ -1,6 +1,21 @@
-<div>
-    <task-card [task]="task" (delete)="deleteTask($event)"  *ngFor='let task of tasks'>
-    </task-card>
+<div class="container-fluid">
+    <div class="nav">
+        <div class="w-container">
+            <div class="logo_container">
+                <img src="../../assets/images/logo.png" width="139" class="logo_img">
+            </div>
+        </div>
+    </div>
+    
+    
+        <task-card [task]="task" (delete)="deleteTask($event)" *ngFor='let task of tasks'>
+        </task-card>
+    
+        <mat-icon id="add-task" (click)="createTask()">add_circle_outline</mat-icon>
+        <footer>
+            <img src="../../assets/images/background_dashboard@2x.jpg" class="bgbgbg">
+        </footer>                
+</div>
 
-    <mat-icon id="add-task" (click)="createTask()">add_circle_outline</mat-icon>
-</div>  
+<!-- 
+<img src="images/Enabled.svg" class="image-2"> -->

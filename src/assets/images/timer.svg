@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>↳ Icon 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.9875,2.5 C8.0875,2.5 2.5,8.1 2.5,15 C2.5,21.9 8.0875,27.5 14.9875,27.5 C21.9,27.5 27.5,21.9 27.5,15 C27.5,8.1 21.9,2.5 14.9875,2.5 Z M15,25 C9.475,25 5,20.525 5,15 C5,9.475 9.475,5 15,5 C20.525,5 25,9.475 25,15 C25,20.525 20.525,25 15,25 Z" id="path-1"></path>
+        <polygon id="path-3" points="15.625 8.75 13.75 8.75 13.75 16.25 20.3125 20.1875 21.25 18.65 15.625 15.3125"></polygon>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="All-tasks" transform="translate(-467.000000, -796.000000)">
+            <g id="Icon-/-Access-Time-/-Filled" transform="translate(465.000000, 794.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" fill-rule="nonzero"></g>
+                <g id="✱-/-Color-/-Icons-/-Primary-or-Secondary" mask="url(#mask-2)" fill="#006FFF" fill-rule="evenodd">
+                    <g id="✱-/-Color-/-Primary-/-Main">
+                        <g id="✱-/-Color-/-Primary-/-700">
+                            <rect id="Rectangle-13" x="0" y="0" width="30" height="30"></rect>
+                        </g>
+                    </g>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Shape" fill-rule="nonzero"></g>
+                <g id="✱-/-Color-/-Icons-/-Primary-or-Secondary" mask="url(#mask-4)" fill="#006FFF" fill-rule="evenodd">
+                    <g id="✱-/-Color-/-Primary-/-Main">
+                        <g id="✱-/-Color-/-Primary-/-700">
+                            <rect id="Rectangle-13" x="0" y="0" width="30" height="30"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
