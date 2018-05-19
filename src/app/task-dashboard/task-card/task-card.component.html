@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card [ngClass]="{'completed': task.completed}">
         <!-- <h4>{{ task.id }}</h4> -->
     
     <mat-icon (click)="isModalShowing=true" class="card-menu">menu</mat-icon>
@@ -9,10 +9,7 @@
     
     <mat-progress-bar mode="determinate" [value]="elapsedPercentage" [ngClass]="{'red': elapsedPercentage <= 20, 'yellow': elapsedPercentage < 50}"></mat-progress-bar>
     <mat-form-field class="">
-        <input matInput type="text" placeholder="tags" [(ngModel)]="value" />
-        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-            <mat-icon>close</mat-icon>
-        </button>
+        <input (blur)="updateTask()" matInput type="text" placeholder="tags" [(ngModel)]="task.tags" />
     </mat-form-field>
 
     <div class="btn-group">

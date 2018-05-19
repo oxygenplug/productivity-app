@@ -5,7 +5,9 @@ task-card {
     padding: 25px;
     text-align: center;
 }
-
+task-card mat-card.completed {
+    background-color: #70d2ff;
+}
 task-card .card-menu {
     position: absolute;
     top: 10px;

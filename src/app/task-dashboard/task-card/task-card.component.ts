@@ -84,6 +84,9 @@ export class TaskCardComponent implements OnInit {
       this.task.dueDate = date;
     this.taskService.updateTask(this.task);
   }
-
+  public updateTask(){
+    this.taskService.updateTask(this.task);
+}
+  
    
 }

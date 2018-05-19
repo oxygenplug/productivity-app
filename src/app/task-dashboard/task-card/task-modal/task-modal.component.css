@@ -24,6 +24,8 @@
     padding: 45px; 
     font-size: 1.2rem;
     background-color: aquamarine;
+    position: relative;
+    bottom: 60px;
 }
 
 .input-container {
