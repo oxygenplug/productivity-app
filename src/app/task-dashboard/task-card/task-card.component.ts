@@ -28,6 +28,7 @@ export class TaskCardComponent implements OnInit {
   constructor() {
     // sets timerSubscriber to the entire time calculation to make it easier to stop the timer
     this.timerSubscriber = this.timer.subscribe(() => {
+        if(!this.task.dueDate) return;
       // calculates the due date time in seconds
       let dueDateSeconds = this.getTotalSeconds(this.task.dueDate);
       // gets the total seconds since task creation
@@ -57,7 +58,7 @@ export class TaskCardComponent implements OnInit {
     }
   }
 
-  // public deleteTask() {
-  //     this.delete.emit(this.task.id);
-  //     }
+  public deleteTask() {
+      this.delete.emit(this.task.id);
+      }
 }

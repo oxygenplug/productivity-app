@@ -1,9 +1,12 @@
 <mat-card>
+        <h4>{{ task.id }}</h4>
+    
     <mat-icon (click)="isModalShowing=true" class="card-menu">menu</mat-icon>
     <h1 aria-placeholder="Title">{{ task.title }}</h1>
     <h4>Due by: </h4>
-    <h6>{{ task.dueDate | date : 'shortDate' }}</h6>
-    <h6>{{ task.dueDate | date : 'shortTime' }}</h6>
+    <h4>{{ task.dueDate | date : 'shortDate' }}</h4>
+    <h4>{{ task.dueDate | date : 'shortTime' }}</h4>
+    
     <mat-progress-bar mode="determinate" [value]="elapsedPercentage" [ngClass]="{'red': elapsedPercentage <= 20, 'yellow': elapsedPercentage < 50}"></mat-progress-bar>
     <mat-form-field class="">
         <input matInput type="text" placeholder="tags" [(ngModel)]="value" />

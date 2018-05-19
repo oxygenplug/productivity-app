@@ -1,8 +1,4 @@
-import { NgModule, Input, Output, EventEmitter, Component } from "@angular/core";
-import { CommonModule } from "@angular/common"
-import { MatButtonModule, MatInputModule } from "@angular/material";
-import { TaskCardComponent } from "../../task-card/task-card.component";
-import { FormsModule } from "@angular/forms";
+import { Input, Output, EventEmitter, Component } from "@angular/core";
 import { OxyModalComponent } from "../../../oxy/modal/oxy-modal.component";
 import { Task } from "../../task";
 
